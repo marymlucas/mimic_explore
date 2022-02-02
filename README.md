@@ -1,2 +1,2 @@
 # mimic_explore
-my exploration of the mimic databases
+my initial exploration of the mimic databases
