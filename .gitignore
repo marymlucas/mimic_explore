@@ -129,5 +129,6 @@ dmypy.json
 .pyre/
 
 
-# ignore creds folder
+# ignore creds and notes folders
 /creds/
+/misc_notes/
