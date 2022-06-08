@@ -5,7 +5,7 @@ DROP TABLE IF EXISTS norepinephrine_equivalent_dose; CREATE TABLE norepinephrine
 -- by Goradia et al. 2020.
 SELECT stay_id, starttime, endtime
 -- calculate the dose
-, ROUND(COALESCE(norepinephrine, 0)
+, ROUND(CAST(COALESCE(norepinephrine, 0)
   + COALESCE(epinephrine, 0)
   + COALESCE(phenylephrine/10, 0)
   + COALESCE(dopamine/100, 0)
@@ -13,6 +13,8 @@ SELECT stay_id, starttime, endtime
   + COALESCE(vasopressin*2.5, 0)
   -- angotensin_ii*10 -- angitensin ii rarely used, currently not incorporated
   -- (it could be included due to norepinephrine sparing effects)
+  as numeric)
+
   , 4) AS norepinephrine_equivalent_dose
   -- angotensin_ii*10 -- angitensin ii rarely used, currently not incorporated
   -- (it could be included due to norepinephrine sparing effects)
