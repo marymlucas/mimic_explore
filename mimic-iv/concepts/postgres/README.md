@@ -3,7 +3,7 @@
 This folder contains scripts to generate useful abstractions of raw MIMIC-IV data ("concepts"). The
 scripts are intended to be run against the MIMIC-IV data in a PostgreSQL database.
 
-**IMPORTANT NOTE**: This is the postgres version for generating the concepts but it differs from what is in the original MIMIC-IV repo (https://github.com/MIT-LCP/mimic-code/tree/main/mimic-iv/concepts). I ran into a lot of errors with the code in that repo, mostly with the DATETIME functions which were still in the BigQuery dialect and would not run for me on Postgresql v14.
+**IMPORTANT NOTE**: This is the postgres version for generating the concepts but it differs from what is in the original MIMIC-IV repo (https://github.com/MIT-LCP/mimic-code/tree/main/mimic-iv/concepts). I ran into a lot of errors when setting things up in Windows so my workaround was to go script by script and make the necessary changes.
 
 I have not tested running postgres-make-concepts.sql with my modified scripts from the psql command line as described in the original instructions (see below), so ymmv. I may test it on another setup if time allows.
 
